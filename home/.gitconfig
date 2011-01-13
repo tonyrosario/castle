@@ -1,5 +1,7 @@
 [user]
-	name = Tony Coconate
-	email = me@tonycoconate.com
+  name = Tony Coconate
+  email = me@tonycoconate.com
 [github]
-	user = tonycoco
+  user = tonycoco
+[apply]
+  whitespace = nowarn
