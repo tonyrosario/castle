@@ -1,4 +1,4 @@
-%w[rubygems wirble pp].each do |gem_name|
+%w[rubygems wirble pp ap].each do |gem_name|
   begin
     require gem_name
   rescue LoadError => err
@@ -11,15 +11,23 @@ Wirble.colorize
 
 alias q exit
 
-# Print SQL to STDOUT
-if ENV.include?('RAILS_ENV') # Rails 2
-  unless Object.const_defined?('RAILS_DEFAULT_LOGGER')
-    require 'logger'
-    Object.const_set('RAILS_DEFAULT_LOGGER', Logger.new(STDOUT))
-  end
-elsif defined?(Rails) # Rails 3
-  if Rails.logger
-    Rails.logger = Logger.new(STDOUT)
-    ActiveRecord::Base.logger = Rails.logger
-  end
+IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:EVAL_HISTORY] = 200
+
+# Rails 3
+if defined?(Rails)
+  require 'irb/completion'
+
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ActiveRecord::Base.clear_active_connections!
+
+  IRB.conf[:PROMPT][:CUSTOM] = {
+    :PROMPT_N => "[#{Rails.application.class.parent_name.downcase}::#{Rails.env}] >> ",
+    :PROMPT_I => "[#{Rails.application.class.parent_name.downcase}::#{Rails.env}] >> ",
+    :PROMPT_S => nil,
+    :PROMPT_C => "?> ",
+    :RETURN => "=> %s\n"
+  }
+  IRB.conf[:PROMPT_MODE] = :CUSTOM
 end
