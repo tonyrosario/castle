@@ -31,10 +31,10 @@ if defined?(Rails)
   rvm_info = "#{rvm_ruby_string}@#{rvm_ruby_gem_set_name}"
 
   @prompt = {
-    :PROMPT_I => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m:%03n > ",  # default prompt
-    :PROMPT_S => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m:%03n%l> ", # known continuation
-    :PROMPT_C => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m:%03n > ",
-    :PROMPT_N => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m:%03n?> ", # unknown continuation
+    :PROMPT_I => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n > ",  # default prompt
+    :PROMPT_S => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n%l> ", # known continuation
+    :PROMPT_C => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n > ",
+    :PROMPT_N => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n?> ", # unknown continuation
     :RETURN => " => %s \n",
     :AUTO_INDENT => true
   }
