@@ -5,3 +5,5 @@
   user = tonycoco
 [apply]
   whitespace = nowarn
+[core]
+  editor = mate -w

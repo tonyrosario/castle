@@ -1,4 +1,5 @@
-%w[rubygems wirble pp ap].each do |gem_name|
+# Load gems
+%w[rubygems net-http-spy looksee wirble pp ap what_methods].each do |gem_name|
   begin
     require gem_name
   rescue LoadError => err
@@ -6,28 +7,39 @@
   end
 end
 
+# Colorize results
 Wirble.init
 Wirble.colorize
 
+# Aliases
 alias q exit
 
-IRB.conf[:AUTO_INDENT] = true
-IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:EVAL_HISTORY] = 200
+# Shows methods only available for a given object
+class Object
+  def local_methods
+    self.methods.sort - self.class.superclass.methods
+  end
+end
 
-# Rails 3
+# Rails
 if defined?(Rails)
-  require 'irb/completion'
-
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   ActiveRecord::Base.clear_active_connections!
 
-  IRB.conf[:PROMPT][:CUSTOM] = {
-    :PROMPT_N => "[#{Rails.application.class.parent_name.downcase}::#{Rails.env}] >> ",
-    :PROMPT_I => "[#{Rails.application.class.parent_name.downcase}::#{Rails.env}] >> ",
-    :PROMPT_S => nil,
-    :PROMPT_C => "?> ",
-    :RETURN => "=> %s\n"
+  rvm_ruby_string = ENV["rvm_ruby_string"] || `rvm tools identifier`.strip.split("@", 2)[0]
+  rvm_ruby_gem_set_name = ENV["rvm_ruby_gem_set_name"] || `rvm tools identifier`.strip.split("@", 2)[1]
+  rvm_info = "#{rvm_ruby_string}@#{rvm_ruby_gem_set_name}"
+
+  @prompt = {
+    :PROMPT_I => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n > ",  # default prompt
+    :PROMPT_S => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n%l> ", # known continuation
+    :PROMPT_C => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n > ",
+    :PROMPT_N => "\033[01;34m#{rvm_info} \033[00m#{Rails.application.class.parent_name.downcase} \033[00;33m(#{Rails.env}) \033[00m#%03n?> ", # unknown continuation
+    :RETURN => " => %s \n",
+    :AUTO_INDENT => true
   }
-  IRB.conf[:PROMPT_MODE] = :CUSTOM
+
+  IRB.conf[:PROMPT] ||= {}
+  IRB.conf[:PROMPT][:TONYCOCO] = @prompt
+  IRB.conf[:PROMPT_MODE] = :TONYCOCO
 end
