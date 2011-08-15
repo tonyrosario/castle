@@ -1,2 +1,2 @@
-export PATH="/Users/username/.rbenv/shims:/Users/username/.rbenv/bin:$PATH"
+export PATH="/Users/tonycoco/.rbenv/shims:/Users/tonycoco/.rbenv/bin:$PATH"
 export POW_DOMAINS=dev,local
