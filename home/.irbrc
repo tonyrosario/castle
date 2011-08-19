@@ -1,5 +1,5 @@
 # Load gems
-%w[rubygems net-http-spy looksee wirble pp ap what_methods].each do |gem_name|
+%w[rubygems looksee wirble pp ap what_methods].each do |gem_name|
   begin
     require gem_name
   rescue LoadError => err
