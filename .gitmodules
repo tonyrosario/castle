@@ -1,3 +1,6 @@
 [submodule "home/.vim/bundle/ack.vim"]
 	path = home/.vim/bundle/ack.vim
 	url = https://github.com/vim-scripts/ack.vim.git
+[submodule "home/.vim/bundle/taglist.vim"]
+	path = home/.vim/bundle/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim.git
