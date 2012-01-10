@@ -1,5 +1,5 @@
 # Load gems
-%w[rubygems looksee wirble pp ap what_methods].each do |gem_name|
+%w[rubygems looksee method_source wirble pp ap what_methods].each do |gem_name|
   begin
     require gem_name
   rescue LoadError => err
@@ -20,6 +20,9 @@ class Object
     self.methods.sort - self.class.superclass.methods
   end
 end
+
+# Set the Looksee editor to TextMate
+Looksee.editor = "mate -l%l %f"
 
 # Rails
 if defined?(Rails)
