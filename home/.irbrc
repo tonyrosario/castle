@@ -1,15 +1,18 @@
 # Load gems
-%w[rubygems looksee method_source wirble pp ap what_methods].each do |gem_name|
+%w[rubygems looksee added_methods backports method_source brice hirb pp ap what_methods].each do |gem_name|
   begin
     require gem_name
   rescue LoadError => err
-    warn "Please do: gem install #{gem_name.sub(/\/.*/,'')}"
+    if gem_name.sub(/\/.*/, '') == 'ap'
+      warn 'Oops! You need to: `gem install awesome_print`'
+    else
+      warn "Oops! You need to: `gem install #{gem_name.sub(/\/.*/, '')}`"
+    end
   end
 end
 
-# Colorize results
-Wirble.init
-Wirble.colorize
+# Brice
+Brice.init
 
 # Aliases
 alias q exit
@@ -22,23 +25,26 @@ class Object
 end
 
 # Set the Looksee editor to TextMate
-Looksee.editor = "mate -l%l %f"
+Looksee.editor = 'mate -l%l %f'
 
 # Rails
-if defined?(Rails)
+if ($0 == 'irb' && ENV['RAILS_ENV']) || ($0 == 'script/rails' && Rails.env)
   ActiveRecord::Base.logger = Logger.new(STDOUT)
   ActiveRecord::Base.clear_active_connections!
 
   @prompt = {
-    :PROMPT_I => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n > ",  # default prompt
-    :PROMPT_S => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n%l> ", # known continuation
+    :PROMPT_I => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n > ", # Default prompt
+    :PROMPT_S => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n%l> ", # Known continuation
     :PROMPT_C => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n > ",
-    :PROMPT_N => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n?> ", # unknown continuation
-    :RETURN => " => %s \n",
+    :PROMPT_N => "#{Rails.application.class.parent_name.downcase} (#{Rails.env}) #%03n?> ", # Unknown continuation
+    :RETURN => ' => %s\n',
     :AUTO_INDENT => true
   }
 
   IRB.conf[:PROMPT] ||= {}
   IRB.conf[:PROMPT][:TONYCOCO] = @prompt
   IRB.conf[:PROMPT_MODE] = :TONYCOCO
+
+  # Hirb
+  Hirb.enable
 end
