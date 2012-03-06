@@ -8,9 +8,15 @@
 [core]
   editor = mate -w
 [alias]
+  co = checkout
   cob = checkout -b
   st = status
-  ci = commit
-  co = checkout
+  br = branch
+  ci = commit -am
+  pom = push origin master
+  pl = pull
+  di = diff --color-words
+  weekreport = shortlog --since=1.weeks --author=tonycoco
+  gl = log --graph --abbrev-commit --pretty=oneline --decorate
 [color]
-	ui = true
+  ui = true
