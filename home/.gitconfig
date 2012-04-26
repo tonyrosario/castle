@@ -5,8 +5,6 @@
   user = tonycoco
 [apply]
   whitespace = nowarn
-[core]
-  editor = mate -w
 [alias]
   co = checkout
   cob = checkout -b
