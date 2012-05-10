@@ -1,21 +1,17 @@
 # Gems
-%w[rubygems added_methods ap brice looksee pp what_methods].each do |gem_name|
+def check_require(gem_name, gem_require=nil)
   begin
-    require gem_name
+    require gem_require || gem_name
   rescue LoadError => err
-    if gem_name.sub(/\/.*/, '') == 'ap'
-      warn 'Oops! You need to: `gem install awesome_print`'
-    else
-      warn "Oops! You need to: `gem install #{gem_name.sub(/\/.*/, '')}`"
-    end
+    warn "Oops! You need to: `gem install #{gem_name}`"
   end
 end
 
-# Brice
-Brice.init { |config| config.libs = %w[pp yaml tempfile benchmark what_methods irb/completion] }
+require 'rubygems' unless defined?(Gem)
 
-# Looksee
-Looksee.editor = 'mate -l%l %f'
+{ 'added_methods' => nil, 'awesome_print' => 'ap', 'brice' => 'brice/init' }.each do |gem_name, gem_require|
+  check_require(gem_name, gem_require)
+end
 
 # Aliases
 alias q exit
