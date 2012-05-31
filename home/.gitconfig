@@ -12,9 +12,14 @@
   br = branch
   ci = commit -am
   pom = push origin master
+  phm = push heroku master
   pl = pull
   di = diff --color-words
   weekreport = shortlog --since=1.weeks --author=tonycoco
   gl = log --graph --abbrev-commit --pretty=oneline --decorate
+  this = !git init && git add . && git commit -m 'initial commit'
+  amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
 [color]
   ui = true
+[merge]
+  tool = opendiff
