@@ -4,9 +4,7 @@ export BUNDLER_EDITOR='mate -w'
 
 # Aliases
 alias grep='grep --color=auto'
-alias dev='cd ~/Development'
-alias obaz='dev && cd obaz'
-alias soc='dev && cd socialeer'
+alias s='cd Sites'
 alias be='bundle exec'
 alias rst='touch tmp/restart.txt && echo "Restarted."'
 alias tlog='tail -f log/development.log'
