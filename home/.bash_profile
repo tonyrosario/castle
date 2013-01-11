@@ -58,12 +58,12 @@ On_ICyan="\[\033[0;106m\]"    # Cyan
 On_IWhite="\[\033[0;107m\]"   # White
 
 # Editors
-export EDITOR='mate -w'
-export BUNDLER_EDITOR='mate -w'
+export EDITOR='subl'
+export BUNDLER_EDITOR='subl'
 
 # Aliases
 alias grep='grep --color=auto'
-alias s='cd Sites'
+alias s='cd ~/Sites'
 alias be='bundle exec'
 alias rst='touch tmp/restart.txt && echo "Restarted."'
 alias tlog='tail -f log/development.log'
