@@ -1,4 +1,4 @@
-GIT_PS1_SHOWDIRTYSTATE=true
+# GIT_PS1_SHOWDIRTYSTATE=true
 
 RED="\[\033[1;91m\]"
 YELLOW="\[\033[1;93m\]"
@@ -25,9 +25,9 @@ function set_git_state {
   remote_pattern="# Your branch is (.*) of"
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-      GIT_REMOTE_STATE="↑"
+      GIT_REMOTE_STATE=" ↑"
     else
-      GIT_REMOTE_STATE="↓"
+      GIT_REMOTE_STATE=" ↓"
     fi
   else
     GIT_REMOTE_STATE=""
@@ -35,7 +35,7 @@ function set_git_state {
 
   diverge_pattern="# Your branch and (.*) have diverged"
   if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-    GIT_REMOTE_STATE="↕"
+    GIT_REMOTE_STATE=" ↕"
   fi
 }
 
@@ -46,7 +46,7 @@ function set_bash_prompt () {
     GIT_STATE_COLOR="${WHITE}"
   fi
 
-  PS1="${WHITE}\@${COLOR_RESET} \w\$(__git_ps1 ' ${GIT_STATE_COLOR}(%s${GIT_REMOTE_STATE})${COLOR_RESET}') $ "
+  PS1="${WHITE}\@${COLOR_RESET} \w\$(__git_ps1 ' ${GIT_STATE_COLOR}(%s)${GIT_REMOTE_STATE}${COLOR_RESET}') $ "
 }
 
 PROMPT_COMMAND=set_bash_prompt
