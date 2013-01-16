@@ -27,7 +27,9 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
 fi
 
 # Bash Prompt
-source ~/.bash_prompt
+if [ -f ~/.bash_prompt ]; then
+  source ~/.bash_prompt
+fi
 
 # Terminal
 export CLICOLOR=1
