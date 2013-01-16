@@ -1,6 +1,3 @@
-# Colors
-source ~/.colors
-
 # Editors
 export EDITOR='subl'
 export BUNDLER_EDITOR='subl'
@@ -30,8 +27,7 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
 fi
 
 # Bash Prompt
-GIT_PS1_SHOWDIRTYSTATE=true
-export PS1="$BIWHITE\@$COLOR_OFF \w\$(__git_ps1 ' $BIWHITE(%s)$COLOR_OFF') $ "
+source ~/.bash_prompt
 
 # Terminal
 export CLICOLOR=1
