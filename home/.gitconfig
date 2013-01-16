@@ -23,3 +23,5 @@
   ui = true
 [merge]
   tool = opendiff
+[core]
+  excludesfile = ~/.gitignore
