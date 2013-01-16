@@ -16,7 +16,7 @@ alias rspc='be rake spec'
 alias memz='top -o vsize'
 alias cpu='top -o cpu'
 
-# rbenv
+# Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -25,13 +25,13 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   source `brew --prefix`/etc/bash_completion
 fi
 
-export GIT_PS1_SHOWDIRTYSTATE=true
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
   source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
 
-# PS1
-PS1=$BIWhite'\@'$Color_Off' \w$(__git_ps1 " '$BIWhite'(%s)'$Color_Off'") \$ '
+# Bash Prompt
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1="$BIWHITE\@$COLOR_OFF \w\$(__git_ps1 ' $BIWHITE(%s)$COLOR_OFF') $ "
 
 # Terminal
 export CLICOLOR=1
@@ -48,5 +48,5 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
-### Added by the Heroku Toolbelt
+# Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
