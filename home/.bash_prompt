@@ -25,9 +25,9 @@ function set_git_state {
   remote_pattern="# Your branch is (.*) of"
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
-      GIT_REMOTE_STATE=" ↑"
+      GIT_REMOTE_STATE=" ⬆"
     else
-      GIT_REMOTE_STATE=" ↓"
+      GIT_REMOTE_STATE=" ⬇"
     fi
   else
     GIT_REMOTE_STATE=""
