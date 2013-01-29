@@ -1,6 +1,6 @@
 # Editors
-export EDITOR='subl'
-export BUNDLER_EDITOR='subl'
+export EDITOR='subl -n -w'
+export BUNDLER_EDITOR='subl -n -w'
 
 # Aliases
 alias grep='grep --color=auto'

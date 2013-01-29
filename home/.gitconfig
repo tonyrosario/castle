@@ -25,5 +25,6 @@
   tool = opendiff
 [core]
   excludesfile = ~/.gitignore
+  editor = subl -n -w
 [push]
   default = upstream
