@@ -10,7 +10,7 @@
   cob = checkout -b
   st = status
   br = branch
-  ci = commit -a
+  ci = commit -a -m
   pom = push origin master
   phm = push heroku master
   pl = pull
