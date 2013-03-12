@@ -12,6 +12,7 @@ alias cuke='be rake cucumber'
 alias rspc='be rake spec'
 alias memz='top -o vsize'
 alias cpu='top -o cpu'
+alias fml='be foreman start -f Procfile.local'
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
