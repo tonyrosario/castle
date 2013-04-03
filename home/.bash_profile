@@ -16,6 +16,8 @@ alias memz="top -o vsize"
 alias cpu="top -o cpu"
 alias fml="be foreman start -f Procfile.local"
 alias dev="cd ~/Development"
+alias rb="dev && cd ruby"
+alias js="dev && cd javascript"
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
