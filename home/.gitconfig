@@ -13,6 +13,7 @@
   ci = commit -a -m
   pom = push origin master
   phm = push heroku master
+  pdm = push devmynd master
   pl = pull
   di = diff --color-words
   weekreport = shortlog --since=1.weeks --author=tonycoco
