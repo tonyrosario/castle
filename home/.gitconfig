@@ -14,7 +14,7 @@
   pom = push origin master
   phm = push heroku master
   pdm = push devmynd master
-  pl = pull
+  pl = pull --rebase
   di = diff --color-words
   weekreport = shortlog --since=1.weeks --author=tonycoco
   gl = log --graph --abbrev-commit --pretty=oneline --decorate
