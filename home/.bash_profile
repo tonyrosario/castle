@@ -19,6 +19,7 @@ alias dev="cd ~/Development"
 alias rb="dev && cd ruby"
 alias js="dev && cd javascript"
 alias resetter="rm -rf tmp/* && rm -rf log/* && rm -rf public/uploads/* && rake db:reset && rake db:test:prepare"
+alias binstall="bundle install --binstubs .bundle/bin"
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
