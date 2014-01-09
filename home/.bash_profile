@@ -8,7 +8,7 @@ alias tree="tree --dirsfirst -lFC"
 alias grep="grep --color=auto"
 alias s="cd ~/Sites"
 alias be="bundle exec"
-alias rst="touch tmp/restart.txt && echo "Restarted.""
+alias rst='touch tmp/restart.txt && echo "Restarted."'
 alias tlog="tail -f log/development.log"
 alias cuke="be rake cucumber"
 alias rspc="be rake spec"
@@ -20,6 +20,7 @@ alias rb="dev && cd ruby"
 alias js="dev && cd javascript"
 alias resetter="rm -rf tmp/* && rm -rf log/* && rm -rf public/uploads/* && rake db:reset && rake db:test:prepare"
 alias binstall="bundle install --binstubs .bundle/bin"
+alias gemstrap="gem install bundler scss-lint rubocop haml"
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -42,14 +43,6 @@ fi
 # Terminal
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# Ruby Tuning
-export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_FREE_MIN=500000
-export RUBY_HEAP_MIN_SLOTS=40000
-export CFLAGS="-march=core2 -O3 -pipe -fomit-frame-pointer"
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
