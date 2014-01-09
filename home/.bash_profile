@@ -56,3 +56,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Node.js
 source /usr/local/opt/node/lib/node_modules/npm/lib/utils/completion.sh
+
+# Vagrant
+ulimit -n 4048
