@@ -9,3 +9,12 @@ Documentation:
 
 MethodLength:
   Enabled: false
+
+ClassLength:
+  Enabled: false
+
+SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+CyclomaticComplexity:
+  Enabled: false
