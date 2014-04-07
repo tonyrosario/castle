@@ -18,3 +18,6 @@ SpaceAroundEqualsInParameterDefault:
 
 CyclomaticComplexity:
   Enabled: false
+
+SignalException:
+  Enabled: false
