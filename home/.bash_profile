@@ -77,5 +77,36 @@ function colortest {
     echo;
   done
 
-  echo
+  echo;
+}
+
+function gifify {
+  if [ -z "$1" ]; then
+    echo "$(tput setaf 1)No input file given. Example: gifify example.mov [max width (pixels)]$(tput sgr 0)"
+    return 1
+  fi
+
+  output_file="${1%.*}.gif"
+
+  echo "$(tput setaf 2)Creating $output_file...$(tput sgr 0)"
+
+  if [ ! -z "$2" ]; then
+    maxsize="-vf scale=$2:-1"
+  else
+    maxsize=""
+  fi
+
+  ffmpeg -loglevel panic -i $1 $maxsize -r 10 -vcodec png gifify-tmp-%05d.png
+  convert +dither -layers Optimize gifify-tmp-*.png GIF:- | gifsicle --no-warnings --colors 256 --delay=10 --loop --optimize=3 --multifile - > $output_file
+  rm gifify-tmp-*.png
+
+  # if [[ $2 == "--good" ]]; then
+  #   ffmpeg -i $1 $maxsize -r 10 -vcodec png gifify-tmp-%05d.png
+  #   convert -verbose +dither -layers Optimize gifify-tmp-*.png GIF:- | gifsicle --colors 256 --delay=10 --loop --optimize=3 --multifile - > $1.gif
+  #   rm gifify-tmp-*.png
+  # else
+  #   ffmpeg -i $1 $maxsize -r 10 -f gif - | gifsicle --optimize=3 --delay=10 > $1.gif
+  # fi
+
+  echo "$(tput setaf 2)Done.$(tput sgr 0)"
 }
