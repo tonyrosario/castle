@@ -30,6 +30,7 @@ alias gd="git diff"
 alias st="git status"
 alias stash="git stash"
 alias g="git "
+alias gap="git add . -p"
 
 
 #Rbenv

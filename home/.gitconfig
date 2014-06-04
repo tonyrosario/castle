@@ -1,8 +1,8 @@
 [user]
-  name = Tony Coconate
-  email = me@tonycoconate.com
+  name = Tony Rosario
+  email = tony.rosario@gmail.com
 [github]
-  user = tonycoco
+  user = tonyrosario
 [apply]
   whitespace = nowarn
 [alias]
@@ -16,7 +16,7 @@
   pdm = push devmynd master
   pl = pull --rebase
   di = diff --color-words
-  weekreport = shortlog --since=1.weeks --author=tonycoco
+  weekreport = shortlog --since=1.weeks --author=tonyrosario
   gl = log --graph --abbrev-commit --pretty=oneline --decorate
   this = !git init && git add . && git commit -m "initial commit"
   amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
