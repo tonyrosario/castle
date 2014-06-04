@@ -1,0 +1,7 @@
+# 1. Rename this file to: .api_keys
+
+# 2. Then you can add your keys to this file. Note that the .gitignore file should ignore this file to keep your keys private!!
+
+# Example:
+export FOO_API_KEY=111222333444555
+export BAR_API_SECRET=AKJA-213AFS-ASDSJH
