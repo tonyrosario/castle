@@ -34,20 +34,6 @@ parse_git_branch() {
 }
 export PS1="[trosario] \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 
-# Git checkout with parameter
-gitcheckout() {
-    git checkout $1
-}
-alias gc=gitcheckout
-
-
-# Git branch with parameter
-gitbranch() {
-    git checkout -b $1
-}
-alias gb=gitbranch
-
-
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -1,3 +1,17 @@
+# Git checkout with parameter
+gitcheckout() {
+    git checkout $1
+}
+alias gc=gitcheckout
+
+
+# Git branch with parameter
+gitbranch() {
+    git checkout -b $1
+}
+alias gb=gitbranch
+
+
 ## shim for homebrew - will update+doctor whenever you try to install or upgrade
 function brew {
   brew_cmd=`which brew`
