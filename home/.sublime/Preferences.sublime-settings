@@ -1,0 +1,72 @@
+{
+	"auto_complete_delay": 0,
+	"bold_folder_labels": true,
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/User/Neopolitan (SL).tmTheme",
+	"copy_with_empty_selection": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"file_exclude_patterns":
+	[
+		"*.beam",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.svg",
+		"*.sublime-workspace"
+	],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"log",
+		"node_modules",
+		".bundle",
+		"tmp"
+	],
+	"font_face": "Monaco",
+	"font_size": 16,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage",
+		"Markdown"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal"
+	],
+	"margin": 2,
+	"original_color_scheme": "Packages/User/Neopolitan (SL).tmTheme",
+	"remember_open_files": false,
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"spell_check": false,
+	"tab_completion": false,
+	"tab_size": 2,
+	"theme": "Neopolitan.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?"
+}

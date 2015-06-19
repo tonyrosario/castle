@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+MagicLamp.register_fixture($1) do
+  $0
+  render $2
+end
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>magic_lamp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.ruby</scope>
+</snippet>

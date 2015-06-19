@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+<thead>
+  <tr>
+    <th>$0</th>
+  </tr>
+</thead>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>thead</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>text.html, text.html.ruby</scope>
+</snippet>

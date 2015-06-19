@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+- question_name: $1
+  answers:
+  - true
+  followup_question_name:
+  - $1_explanation
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>filter</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.yaml</scope>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+- name: $1_explanation
+  pdf_field: _explain_part_11.$2
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>govt_form_q</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.yaml</scope>
+</snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+(loop [$1]
+  (if ($2)
+    $3
+    (recur $0)))
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>loop</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.clojure</scope>
+</snippet>
