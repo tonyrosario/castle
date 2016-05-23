@@ -34,11 +34,13 @@ alias gc="git commit -m"
 alias gap="git add . -p"
 
 
-#Rbenv
+# rbenv
 alias rlist="rbenv versions"
 
+# jenv
+alias jlist="jenv versions"
 
-#Ruby
+# Ruby
 alias irb="pry"
 
 

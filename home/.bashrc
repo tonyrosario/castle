@@ -7,6 +7,9 @@ if [ -f $HOME/.aliases ]; then
   source $HOME/.aliases
 fi
 
+# enable shims + autocomplete for jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANT_HOME=$HOME/java/apache-ant-1.9.7
 : "${JAVA_HOME?Need to set JAVA_HOME}"
