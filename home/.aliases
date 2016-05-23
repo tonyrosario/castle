@@ -29,6 +29,8 @@ alias gd="git diff"
 alias st="git status"
 alias stash="git stash"
 alias g="git "
+alias ga="git add"
+alias gc="git commit -m"
 alias gap="git add . -p"
 
 
