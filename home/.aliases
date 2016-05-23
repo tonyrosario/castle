@@ -116,3 +116,8 @@ alias esstop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.elasticsearc
 #Postgres
 alias pgs="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgss="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
+# Sublime aliases
+alias snips="cd $HOME/Castle/home/.sublime/snippets"
+alias spack="cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages"
+alias suser="cd $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
