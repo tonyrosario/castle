@@ -3,6 +3,10 @@
 # It should not output anything
 # For more info: http://superuser.com/questions/789448/choosing-between-bashrc-profile-bash-profile-etc
 
+if [ -f $HOME/.aliases ]; then
+  source $HOME/.aliases
+fi
+
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANT_HOME=$HOME/java/apache-ant-1.9.7
 : "${JAVA_HOME?Need to set JAVA_HOME}"
