@@ -1,4 +1,3 @@
-alias profile="vi ~/.profile"
 alias ll="ls -l"
 alias lo="ls -o"
 alias lh="ls -lh"
@@ -39,7 +38,6 @@ alias rlist="rbenv versions"
 
 #Ruby
 alias irb="pry"
-alias motoruby="/Library/RubyMotion/bin/ruby"
 
 
 # Start a ruby fake localhost server in current directory
