@@ -31,7 +31,7 @@ alias stash="git stash"
 alias g="git "
 alias ga="git add"
 alias gc="git commit -m"
-alias gap="git add . -p"
+alias gap="git add -p"
 alias ship="git push"
 alias shipit="git push"
 
