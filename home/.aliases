@@ -23,6 +23,7 @@ alias .....="cd ../../../.."
 
 
 #git
+alias go="git checkout"
 alias gs="git status"
 alias gpr="git pull rebase"
 alias gd="git diff"
@@ -34,6 +35,8 @@ alias gc="git commit -m"
 alias gap="git add -p"
 alias ship="git push"
 alias shipit="git push"
+alias addall="git add --all :/"
+alias addjava='git add \./\*.java'
 
 
 # rbenv
