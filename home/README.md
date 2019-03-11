@@ -1,3 +1,6 @@
+### Chrome plugins
+[JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/mhimpmpmffogbmmkmajibklelopddmjf/related?hl=en)
+
 ### Run in home directory
 
 ln -s ~/castle/home/.aliases  
