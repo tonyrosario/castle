@@ -53,3 +53,17 @@ CMD + SHIFT + .
 
 ### Disable CAPS LOCK
 Under Keyboard -> Keyboard, click 'Modifier Keys', change the mapping for Caps Lock to No Action (or some other key).
+
+### Attempt to fix choppy Bluetooth Audio
+```
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80 
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 80 
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 80 
+defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool Min (editable)" 80 
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool" 80 
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Max" 80 
+defaults write com.apple.BluetoothAudioAgent "Negotiated Bitpool Min" 80
+
+sudo killall coreaudiod
+```
+[Source](https://apple.stackexchange.com/questions/167245/yosemite-bluetooth-audio-is-choppy-skips)
