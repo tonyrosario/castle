@@ -12,7 +12,6 @@
 
 
 ```
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms) and 0 is 'blazingly fast'
 ```
 [Source](https://gist.github.com/hofmannsven/ff21749b0e6afc50da458bebbd9989c5)
