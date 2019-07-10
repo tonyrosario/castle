@@ -30,6 +30,12 @@ defaults delete NSGlobalDomain InitialKeyRepeat
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
+### Change screenshot location
+```
+mkdir ~/Desktop/screenshots
+defaults write com.apple.screencapture location ~/Desktop/screenshots
+```
+
 ##### Shortcut to Show/Hide Hidden Files
 ```
 CMD + SHIFT + .
