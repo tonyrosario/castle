@@ -1,11 +1,12 @@
 # Terimal Commands
 
 ### Modify Dock Show/Hide Animation Speed
-##### Completely Remove
+[Source](https://apple.stackexchange.com/questions/33600/how-can-i-make-auto-hide-show-for-the-dock-faster)
+##### Completely Remove Animation Speed
 ```defaults write com.apple.dock autohide-time-modifier -int 0;killall Dock```
 
-##### Reduce Speed
-```defaults write com.apple.dock autohide-time-modifier -float 0.25;killall Dock```
+##### Make the Dock animation faster
+```defaults write com.apple.dock autohide-time-modifier -float 0.15;killall Dock```
 
 
 ### Increase Key Repeat Rate
